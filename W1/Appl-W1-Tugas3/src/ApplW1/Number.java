@@ -22,13 +22,16 @@ public class Number {
         intList = new Integer[size];
         
         System.out.println("\nEnter the number...");
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < size; i++){
             intList[i] = scan.nextInt();
+        }
         Sorting.insertionSort(intList);
                 
         System.out.println ("\nYour numbers in sorted order...");
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < size; i++){
             System.out.print(intList[i] + "  ");
+        }
         System.out.println ();
+        
     }
 }

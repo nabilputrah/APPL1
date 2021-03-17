@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class WeeklySales {
     public static void main(String[] args){
         int i, size, sales;
-        String f, l;
+        String first, last;
         
         Scanner scan = new Scanner(System.in);
         
@@ -26,14 +26,14 @@ public class WeeklySales {
         for (i = 0; i < size; i++){
             System.out.print ("\nSales "+(i+1));
             System.out.print ("\n\tFirst Name \t:");
-            f = scan.next();
+            first = scan.next();
             System.out.print ("\tLast Name \t:");
-            l = scan.next();
+            last = scan.next();
             System.out.print ("\tTotal Sales \t:");
             sales = scan.nextInt();
             
             //Deklarasi
-            salesStaff[i] = new Salesperson(f, l, sales);
+            salesStaff[i] = new Salesperson(first, last, sales);
         }
         
         Sorting.insertionSort(salesStaff);
