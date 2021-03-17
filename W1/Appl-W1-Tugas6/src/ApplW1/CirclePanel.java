@@ -16,6 +16,8 @@ package ApplW1;
 // bottom that move the circle.
 // ******************************************************************
 import java.awt.*;
+import static java.awt.Color.magenta;
+import static java.awt.Color.pink;
 import javax.swing.*;
 import java.awt.event.*;
 public class CirclePanel extends JPanel{
@@ -44,26 +46,27 @@ public class CirclePanel extends JPanel{
         
         // Create buttons to change color of the circle
         JButton orange = new JButton("Orange");
-        JButton red = new JButton("Red");
-        JButton yellow = new JButton("Yellow");
-        JButton green = new JButton("Green");
+        JButton cyan = new JButton("cyan");
+        JButton magenta = new JButton("magenta");
+        JButton pink = new JButton("pink");
         
         // Add listeners to the buttons
         left.addActionListener(new MoveListener(-20, 0));
         right.addActionListener(new MoveListener(20, 0));
         up.addActionListener(new MoveListener(0, -20));
         down.addActionListener(new MoveListener(0, 20));
-        orange.addActionListener(new ColorListener(Color.orange));
-        red.addActionListener(new ColorListener(Color.red));
-        yellow.addActionListener(new ColorListener(Color.yellow));
-        green.addActionListener(new ColorListener(Color.green));
-        choose.addActionListener(new ColorListener(null));
         
-        // Change background color of buttons
+        orange.addActionListener(new ColorListener(Color.orange));
+        cyan.addActionListener(new ColorListener(Color.cyan));
+        choose.addActionListener(new ColorListener(null));
+        magenta.addActionListener(new ColorListener(Color.magenta));
+        pink.addActionListener(new ColorListener(Color.pink));
+        
+//        // Change background color of buttons
         orange.setBackground(Color.orange);
-        red.setBackground(Color.red);
-        yellow.setBackground(Color.yellow);
-        green.setBackground(Color.green);
+        cyan.setBackground(Color.cyan);
+        magenta.setBackground(Color.magenta);
+        pink.setBackground(Color.pink);
         
         // Need a panel to put the buttons on or they'll be on
         // top of each other.
@@ -74,10 +77,10 @@ public class CirclePanel extends JPanel{
         buttonPanel.add(up);
         buttonPanel.add(down);
         colorButtonPanel.add(orange);
-        colorButtonPanel.add(red);
+        colorButtonPanel.add(cyan);
         colorButtonPanel.add(choose);
-        colorButtonPanel.add(yellow);
-        colorButtonPanel.add(green);
+        colorButtonPanel.add(magenta);
+        colorButtonPanel.add(pink);
         
         // Add the button panel to the bottom of the main panel
         this.add(buttonPanel, "South");
