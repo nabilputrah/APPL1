@@ -63,10 +63,10 @@ public class CirclePanel extends JPanel{
         pink.addActionListener(new ColorListener(Color.pink));
         
 //        // Change background color of buttons
-        orange.setBackground(Color.orange);
-        cyan.setBackground(Color.cyan);
-        magenta.setBackground(Color.magenta);
-        pink.setBackground(Color.pink);
+        orange.setForeground(Color.orange);
+        cyan.setForeground(Color.cyan);
+        magenta.setForeground(Color.magenta);
+        pink.setForeground(Color.pink);
         
         // Need a panel to put the buttons on or they'll be on
         // top of each other.
