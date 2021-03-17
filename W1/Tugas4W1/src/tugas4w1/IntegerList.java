@@ -17,6 +17,7 @@ package tugas4w1;
 //
 // ****************************************************************
 import java.util.Scanner;
+import static tugas4w1.IntegerTest.scan;
 public class IntegerList{
     int[] list; //values in the list
     
@@ -86,10 +87,12 @@ public class IntegerList{
         }
     }
     
-    void replaceAll(int newVal, int i){
-        list[i] = newVal;
+    void replaceAll(){
+        for(int i = 0; i < list.length; i++){
+            System.out.println("Enter the new value for list no " + i + ":");                    
+            list[i] = scan.nextInt();            
+        }
     }
-    
     void sortDecreasing(){
         int maxIndex;
         for(int i = 0; i < list.length - 1; i++){
@@ -108,8 +111,8 @@ public class IntegerList{
         }
     }
     
-    int binarySearchD(int target){
-        int min = 0, max = list.length, mid = 0, location = -1;
+    int binarySearch(int target){
+        int min = 0, max = list.length-1, mid = 0, location = -1;
         while(location == -1 && min <= max){
             mid = (min + max) / 2;
             if(target == list[mid])
@@ -123,4 +126,6 @@ public class IntegerList{
         }
         return location;
     }
+
+
 }

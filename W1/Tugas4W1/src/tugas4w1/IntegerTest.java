@@ -38,17 +38,19 @@ public class IntegerTest{
     // Do what the menu item calls for
     //-------------------------------------------------------
     public static void dispatch(int choice){
-        int loc, oldVal, newVal,i,size = 0;
+        int loc, oldVal, newVal,i,size=0;
         switch(choice){
             case 0:
                 System.out.println("Bye!");
             break;
             
             case 1:
+                System.out.println("Enter the new value for list no " + size + ":");    
                 System.out.println("How big should the list be?");
                 size = scan.nextInt();
                 list = new IntegerList(size);
                 list.randomize();
+                System.out.println("Enter the new value for list no " + size + ":");                
             break;
             
             case 2:
@@ -68,6 +70,7 @@ public class IntegerTest{
             
             case 4:
                 list.print();
+                System.out.println("Enter the new value for list no " + size + ":");                
             break;
             
             case 5:
@@ -77,13 +80,8 @@ public class IntegerTest{
                 newVal = scan.nextInt();
                 list.replaceFirst(oldVal, newVal);
             break;
-            case 6:
-                System.out.println("HAIIIIIIII: ");
-                for(i = 0; i < size; i++){
-                    System.out.println("Enter the new value for list no " + i + ":");                    
-                    newVal = scan.nextInt();
-                    list.replaceAll(newVal, i);
-                }
+            case 6:                
+                list.replaceAll();
             break;
             
             case 7:
@@ -92,7 +90,7 @@ public class IntegerTest{
             
             case 8:
                 System.out.println("Enter the value to look for: ");
-                loc = list.binarySearchD(scan.nextInt());
+                loc = list.binarySearch(scan.nextInt());
                 if(loc != -1){
                     System.out.println("Found at location " + loc);
                 } 
