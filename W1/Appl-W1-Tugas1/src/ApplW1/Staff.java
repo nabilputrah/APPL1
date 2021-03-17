@@ -11,9 +11,6 @@ package ApplW1;
  */
 public class Staff{
     private StaffMember[] staffList;
-    //----------------------------------------------------------
-    // Constructor: Sets up the list of staff members.
-    //----------------------------------------------------------
     public Staff (){
         staffList = new StaffMember[8];
         staffList[0] = new Executive ("Sam", "123 Main Line",
@@ -40,9 +37,6 @@ public class Staff{
         ((Commission)staffList[7]).addSales(950);
         
     }
-    //----------------------------------------------------------
-    // Pays all staff members.
-    //----------------------------------------------------------
     public void payday (){
         double amount;
         for (int count=0; count < staffList.length; count++){

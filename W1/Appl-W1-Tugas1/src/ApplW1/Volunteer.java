@@ -22,9 +22,6 @@ String ePhone)
 {
 super (eName, eAddress, ePhone);
 }
-//----------------------------------------------------------
-// Returns a zero pay value for this volunteer.
-//----------------------------------------------------------
 public double pay()
 {
 return 0.0;
