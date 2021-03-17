@@ -19,10 +19,6 @@ public class Rectangle extends Shape {
         width = s;
     }
     
-    /**
-     *
-     * @return
-     */
     @Override
     public double area(){
         return length*width;

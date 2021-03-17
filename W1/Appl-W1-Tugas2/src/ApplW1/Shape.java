@@ -17,7 +17,6 @@ public abstract class Shape {
     public Shape (String eName){
         this.name = eName;
     }
-    
     @Override
     public String toString(){
         return "\nShape Name: "+name;
