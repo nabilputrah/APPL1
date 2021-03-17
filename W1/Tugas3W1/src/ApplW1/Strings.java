@@ -27,7 +27,7 @@ public class Strings {
             strList[i] = scan.next();
         }
         
-        Sorting.selectionSort(strList);
+        Sorting.insertionSort(strList);
         
         System.out.println ("\nYour numbers in sorted order...");
         for (int i = 0; i < size; i++){
