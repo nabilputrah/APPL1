@@ -44,13 +44,11 @@ public class IntegerTest{
                 System.out.println("Bye!");
             break;
             
-            case 1:
-                System.out.println("Enter the new value for list no " + size + ":");    
+            case 1:    
                 System.out.println("How big should the list be?");
                 size = scan.nextInt();
                 list = new IntegerList(size);
-                list.randomize();
-                System.out.println("Enter the new value for list no " + size + ":");                
+                list.randomize();             
             break;
             
             case 2:
@@ -69,8 +67,7 @@ public class IntegerTest{
             break;
             
             case 4:
-                list.print();
-                System.out.println("Enter the new value for list no " + size + ":");                
+                list.print();               
             break;
             
             case 5:
