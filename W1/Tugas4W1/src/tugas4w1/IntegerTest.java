@@ -16,7 +16,7 @@ package tugas4w1;
 //
 // ****************************************************************
 import java.util.Scanner;
-public class IntegerListTest{
+public class IntegerTest{
     static IntegerList list = new IntegerList(10);
     static Scanner scan = new Scanner(System.in);
     
@@ -38,7 +38,7 @@ public class IntegerListTest{
     // Do what the menu item calls for
     //-------------------------------------------------------
     public static void dispatch(int choice){
-        int loc, oldVal, newVal,i,size = 1;
+        int loc, oldVal, newVal,i,size = 0;
         switch(choice){
             case 0:
                 System.out.println("Bye!");
@@ -77,8 +77,8 @@ public class IntegerListTest{
                 newVal = scan.nextInt();
                 list.replaceFirst(oldVal, newVal);
             break;
-            
             case 6:
+                System.out.println("HAIIIIIIII: ");
                 for(i = 0; i < size; i++){
                     System.out.println("Enter the new value for list no " + i + ":");                    
                     newVal = scan.nextInt();
