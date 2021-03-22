@@ -22,11 +22,20 @@ public class Factorials{
         Scanner scan = new Scanner(System.in);
         while (keepGoing.equals("y") || keepGoing.equals("Y")){
             System.out.print("Enter an integer: ");
+            try{
             int val = scan.nextInt();
-            System.out.println("Factorial(" + val + ") = "  + MathUtils.factorial(val));
+            if (val<0){
+                throw new IllegalArgumentException("The integer should not minus\n");
+            }
+            else if (val>16){
+                throw new IllegalArgumentException("The integer should not bigger than 16\n");
+            }
+            System.out.println("Factorial(" + val + ") = "+ MathUtils.factorial(val));
+            } catch (IllegalArgumentException e){
+                System.out.print(e);                
+            }
             System.out.print("Another factorial? (y/n) ");
             keepGoing = scan.next();
         }
     }
 }
-
