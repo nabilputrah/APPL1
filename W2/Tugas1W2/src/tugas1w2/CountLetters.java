@@ -36,7 +36,8 @@ public class CountLetters{
             if (counts [i] != 0)
                 System.out.println((char)(i +'A') + ": " + counts[i]);
         }catch(ArrayIndexOutOfBoundsException e){
-
+            System.out.print("Not a letter");
+            System.out.println();
         }
         }
     }
