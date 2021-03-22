@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tugas4w2;
 
 /**
@@ -27,10 +22,8 @@ public class CopyingAFile {
             }
             break;
         }catch (FileNotFoundException e){
-            System.out.print("File Does not exist");
-            System.out.print("Wanna keep looking? (y/n) ");
-            keepLooking = scan.next();            
-            System.out.println();
+            System.out.print("File Does not exist\n");
+
         }
         System.out.print("Wanna keep looking? (y/n) ");
         keepLooking = scan.next();
