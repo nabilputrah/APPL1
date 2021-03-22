@@ -23,11 +23,9 @@ public class CopyingAFile {
             break;
         }catch (FileNotFoundException e){
             System.out.print("File Does not exist\n");
-
         }
         System.out.print("Wanna keep looking? (y/n) ");
         keepLooking = scan.next();
         }
     }
-    
 }
