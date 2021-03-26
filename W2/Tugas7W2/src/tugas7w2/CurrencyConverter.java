@@ -26,5 +26,4 @@ public class CurrencyConverter{
         frame.pack();  
         frame.setVisible(true);  
     }  
-}  
-
+}

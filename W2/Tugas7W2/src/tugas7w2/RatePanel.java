@@ -70,7 +70,4 @@ public class RatePanel extends JPanel  {
             + (rate[index] * Integer.valueOf(input.getText())) + " U.S. Dollars");   
         }
     }    
-}  
-  
-
-
+}
