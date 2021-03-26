@@ -21,7 +21,7 @@ public class CurrencyConverter{
         JFrame frame = new JFrame ("Currency Converter");  
         frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);  
 
-        RatePanel1 ratePanel = new RatePanel1 ();  
+        RatePanel ratePanel = new RatePanel ();  
         frame.getContentPane().add(ratePanel);  
         frame.pack();  
         frame.setVisible(true);  
